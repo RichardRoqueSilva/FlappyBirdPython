@@ -322,10 +322,14 @@ def main():
                 rodando = False
                 pygame.quit()
                 quit()
+                # Tecla espaço
             if evento.type == pygame.KEYDOWN:
                 if evento.key == pygame.K_SPACE:
-                    for passaro in passaros:
-                        passaro.pular()
+                    passaro.pular()
+
+                # Toque na tela ou clique do mouse
+            if evento.type == pygame.MOUSEBUTTONDOWN:
+                passaro.pular()
 
         # mover as coisas
         for passaro in passaros:
